@@ -1,7 +1,7 @@
 from numpy import random
 import random as rand
 
-decreasingPrice = 5
+decreasingPrice = None
 # The time have an exponential distribution, and as long as the simulation is running it increase
 def getTime(timeStamp):
     x = random.exponential(scale=1, size=(1, 1)) + timeStamp
@@ -38,7 +38,7 @@ def main():
             inventory = 10000
             timeStamp = 0
             global decreasingPrice
-            decreasingPrice = 10
+            decreasingPrice = 5
             # Simulating the purchasing until inventory is over
             while (inventory > 0):
                 purchProb, timeStamp = purchaseProb(index, timeStamp)
