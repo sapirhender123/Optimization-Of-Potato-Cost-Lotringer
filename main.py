@@ -1,7 +1,7 @@
 from numpy import random
 import random as rand
 
-decreasingPrice = 10
+decreasingPrice = 5
 # The time have an exponential distribution, and as long as the simulation is running it increase
 def getTime(timeStamp):
     x = random.exponential(scale=1, size=(1, 1)) + timeStamp
@@ -10,12 +10,12 @@ def getTime(timeStamp):
 # Three options for prices, the last one is price that decreasing according to the time
 def getPrice(num):
     if num == 1:
-        return 5
+        return 2
     elif num == 2:
-        return 8
+        return 3
     elif num == 3:
         global decreasingPrice
-        decreasingPrice = 0.99 * decreasingPrice
+        decreasingPrice = 0.95 * decreasingPrice
         return decreasingPrice
 
 # Calculate the probability of customer to purchase
@@ -30,13 +30,12 @@ def purchaseThreshold():
 
 
 def main():
-    times = []
     # Iterating the prices
     for index in range(1,4):
         sumTime = 0
         # Calculating the average from 15 loops
         for i in range(15):
-            inventory = 100
+            inventory = 10000
             timeStamp = 0
             global decreasingPrice
             decreasingPrice = 10
@@ -50,8 +49,7 @@ def main():
             sumTime = sumTime + timeStamp
         # Calculating the average of all the loops
         avgTime = sumTime / 15
-        times.append(avgTime)
-        print("The average time of index ",index," is ",times[index - 1])
+        print("The average time of index ",index," is ",avgTime[0][0])
 
 
 if __name__ == '__main__':
