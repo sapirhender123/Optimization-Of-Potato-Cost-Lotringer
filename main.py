@@ -1,5 +1,6 @@
 from numpy import random
 import random as rand
+# import matplotlib.pyplot as plt
 
 decreasingPrice = None
 # The time have an exponential distribution, and as long as the simulation is running it increase
@@ -30,9 +31,13 @@ def purchaseThreshold():
 
 
 def main():
+    # price1 = []
+    # price2 = []
+    # price3 = []
     # Iterating the prices
     for index in range(1,4):
         sumTime = 0
+        temp = []
         # Calculating the average from 15 loops
         for i in range(15):
             inventory = 10000
@@ -47,9 +52,25 @@ def main():
                     amount = rand.uniform(1.0, 5.0) # Random amount of inventory
                     inventory = inventory - amount
             sumTime = sumTime + timeStamp
+            temp.append(timeStamp[0][0])
         # Calculating the average of all the loops
         avgTime = sumTime / 15
         print("The average time of index ",index," is ",avgTime[0][0])
+        if index == 1:
+            price1 = temp
+        elif index == 2:
+            price2 = temp
+        elif index == 3:
+            price3 = temp
+    # fig, ax = plt.subplots()
+    # print("price 1" , price1)
+    # print("price 2", price2)
+    # print("price 3", price3)
+    # plt.plot(price1, label="price1")
+    # plt.plot(price2, label="price2")
+    # plt.plot(price3, label="price3")
+    # ax.legend()
+    # plt.show()
 
 
 if __name__ == '__main__':
