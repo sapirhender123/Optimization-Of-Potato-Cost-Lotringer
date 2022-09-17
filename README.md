@@ -3,12 +3,11 @@
 ##  Introduction to the problem and presentation of its complexity:
 Many businesses find it difficult to maintain fixed profits and even maximize their income according to the set prices in the market. <br/>
 Because of this, many places in the world try to predict the optimal price for their goods.
-As part of our work, we will try to optimize the above forecasting process at the "Lotteringer Brothers" packing house.  <br/>
+As a part of our work, we will try to optimize the above forecasting process at the "Lotteringer Brothers" packing house.  <br/>
 The Lotringer packing house is located in Moshav Givat - Han, and they pack two types of potatoes - red and white. <br/>
 The income of the packing house is affected by the sale of the goods only, while its expenses are affected by number of factors,
 some of which are constant and some of them change.
-We will review all the factors that affect this in our work, and then through simulation, we will examine options
-Variation in the pricing of the potatoes, and we will also examine how the difference in price affects the duration of the sale.
+We will review all the  affecting factors in our work, and then by conducting a simulation, we will examine some options of variation in the pricing of the potatoes. Also, we will examine how does the difference in price affect the duration of the sale.
 
 ## The purpose of the simulation
 This tool allows us to simulate different scenarios that exist in the real world under different constraints.
