@@ -63,13 +63,10 @@ we use a probability calculation function that quantifies the chance of buying d
 The function is constructed in such a way that as the higher the price, the smaller the chance to buy,<br/>
 and in addition, as time passes, the chance to buy decreases as well because the goods are less fresh. The function results are in the range [1,0].<br/>
 f = 1/price + 1/time<br/>
-<br/>
 2. Setting a price - in order to compare the simulation between the effect of different prices, we set different prices in the reasonable price range for the sale price according to the fixed and variable expenses we have.
-<br/>
 3. The purchase threshold lottery - in order to highlight an option in which the customer is debating whether to buy the potatoes,<br/>
 We drew a buy threshold with a uniform distribution in the range [1,0]. Therefore, if the probability of buying is greater than the threshold,<br/>
 So the customer buys the potatoes, and if it's small, he doesn't buy.<br/>
-<br/>
 4. Lottery of purchase quantity - in order to select a different purchase quantity between each customer, we drew quantities in a distribution<br/>
 uniform in the range [5,1.]<br/>
 The decisions regarding the aforementioned functions, the various distributions chosen and the ranges of the functions were made in coordination
